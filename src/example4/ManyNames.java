@@ -12,9 +12,9 @@ public class ManyNames {
 		Thread two = new Thread(nr);
 		Thread three = new Thread(nr);
 		
-		one.setName("Fred");
-		two.setName("Lucy");
-		three.setName("Ricky");
+		one.setName("t1");
+		two.setName("t2");
+		three.setName("t3");
 		
 		one.start();
 		two.start();

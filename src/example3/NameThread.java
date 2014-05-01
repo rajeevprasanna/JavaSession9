@@ -10,5 +10,13 @@ public class NameThread {
 		//Run this class be commenting below setName call
 		t.setName("Fred");
 		t.start();
+		
+		
+		
+		Thread t1 = new Thread(nr);		
+//		t1.setName("Fred");
+		t1.start();
+		
+		System.out.println("threads ended");
 	}
 }
