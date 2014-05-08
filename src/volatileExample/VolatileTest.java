@@ -1,6 +1,6 @@
 package volatileExample;
 
-/*
+/**
  * 
  * So what happens? Each thread has its own stack, and so its own copy of variables it can access. When the thread is created, 
  * it copies the value of all accessible variables in its own memory. The volatile keyword is used to say to the jvm "Warning, 

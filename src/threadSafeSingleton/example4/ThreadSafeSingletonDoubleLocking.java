@@ -17,7 +17,7 @@ public class ThreadSafeSingletonDoubleLocking {
 
 	public static ThreadSafeSingletonDoubleLocking getInstanceUsingDoubleLocking() {
 		if (instance == null) {
-			synchronized (ThreadSafeSingleton.class) {
+			synchronized (ThreadSafeSingletonDoubleLocking.class) {
 				if (instance == null) {
 					instance = new ThreadSafeSingletonDoubleLocking();
 				}
