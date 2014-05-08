@@ -17,6 +17,14 @@ public class VolatileTest {
 	// private static final Logger LOGGER = MyLoggerFactory.getSimplestLogger();
 
 	private static volatile int MY_INT = 0;
+	private  volatile Integer testInteger = 0;
+	//private static volatile obj = new obje();
+	//private volatile obj = new obje(); 
+	
+	//VolatileTest v1 = new VolatileTest();//t1,t2
+	//VolatileTest v2 = new VolatileTest();//t3, t4
+	
+	private volatile VolatileTest test;
 
 	public static void main(String[] args) {
 		new ChangeListener().start();
@@ -46,6 +54,9 @@ public class VolatileTest {
 				// LOGGER.log(Level.INFO, "Incrementing MY_INT to {0}",
 				// local_value+1);
 				MY_INT = ++local_value;
+				
+				//obj.count = ++ local_value
+				//obj.name = thread.currentRunning threadname
 				try {
 					Thread.sleep(500);
 				} catch (InterruptedException e) {
