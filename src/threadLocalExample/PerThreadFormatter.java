@@ -18,7 +18,6 @@ import java.text.SimpleDateFormat;
 public class PerThreadFormatter {
 
 	private static final ThreadLocal<SimpleDateFormat> dateFormatHolder = new ThreadLocal<SimpleDateFormat>() {
-
 		/*
 		 * initialValue() is called
 		 */

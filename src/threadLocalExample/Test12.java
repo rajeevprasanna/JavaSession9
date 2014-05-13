@@ -8,8 +8,18 @@ public class Test12 {
 	private List<Object> list = new ArrayList<Object>();
 
 	public static void main(String[] args) {
-		Test123 t = new Test123();
-		t.startProcess();
+		final Test12 test12 = new Test12();
+
+		class LocalRunnable implements Runnable {
+			@Override
+			public void run() {
+				test12.startProcess();
+			}
+		}
+		for (int i = 0; i < 100; i++) {
+			Thread t = new Thread(new LocalRunnable());
+			t.start();
+		}
 	}
 
 	public void startProcess() {
@@ -21,8 +31,8 @@ public class Test12 {
 		System.out.println("After processed list => " + list.size());
 	}
 
-	public void methodA() {
-		list.add("a");
+	public void methodA() {		 
+		list.add("a");		 
 	}
 
 	public void methodB() {
